@@ -1,3 +1,3 @@
 # flux.1 [dev]
 
-12b de parâmetros!
+cheque a referência de configuração em https://huggingface.co/docs/hub/spaces-config-reference
