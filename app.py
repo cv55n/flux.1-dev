@@ -5,6 +5,7 @@ import spaces
 import torch
 from diffusers import DiffusionPipeline, FlowMatchEulerDiscreteScheduler, AutoencoderTiny, AutoencoderKL
 from transformers import CLIPTextModel, CLIPTokenizer, T5EncoderModel, T5TokenizerFast
+from live_preview_helpers import calculate_shift, retrieve_timesteps, flux_pipe_call_that_returns_an_iterable_of_images
 
 dtype = torch.bfloat16
 
@@ -82,7 +83,7 @@ with gr.Blocks(css=css) as demo:
                 value=0
             )
 
-            randomize_seed = gr.Checkbox(label="Randomize seed", value=True)
+            randomize_seed = gr.Checkbox(label="aleatorizar seed", value=True)
 
             with gr.Row():
                 width = gr.Slider(
